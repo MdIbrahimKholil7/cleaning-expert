@@ -1,13 +1,18 @@
-import { makeStyles } from '@material-ui/styles';
-import { Box, Button, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography, } from '@mui/material';
+
+import { Box, Button, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography, useMediaQuery, useTheme, } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
 import banner from '../../assets/banner.png'
+import mobile from '../../assets/mobile.jpg'
+
 
 const useStyles = makeStyles({
     banner: {
         width: '100%',
-        height: "600px",
-
+        height:'600px',
+        '@media (max-width:900px)': {
+            height:'400px',
+        },
     },
     bannerContainer: {
         position: 'absolute',
@@ -15,15 +20,26 @@ const useStyles = makeStyles({
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: 88
+        zIndex: 88,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })
 
 const Banner = () => {
+
+    const theme = useTheme()
+    const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+
     const classes = useStyles()
     const styles = {
         heroContainer: {
-            height: 600,
+           
+            height:'600px',
+            '@media (max-width:900px)': {
+                height:'400px',
+            },
             width: '100%',
             position: 'relative',
 
@@ -32,16 +48,38 @@ const Banner = () => {
     };
 
     const display = {
-        display: 'flex', justifyContent: 'center', alignItems: 'center'
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
+    const fontSize = {
+        xs: '20px',
+        sm: '30px',
+        lg: '40px'
+    }
+
+
+    const border={
+        '@media (max-width:900px)': {
+            border: '1px solid #E7E7E7',
+            borderRadius: "4px"
+        },
+    }
+
 
     return (
         <Box
             className='banner'
             style={styles.heroContainer}
+          marginTop={
+            {
+                xs:'-8px',
+                sm:'0px'
+            }
+          }
         >
             <Box>
-                <img className={classes.banner} src={banner} alt="" />
+                <img className={classes.banner} src={isMatch ? mobile : banner} alt="" />
             </Box>
             <Grid
                 container
@@ -54,31 +92,49 @@ const Banner = () => {
                         display: 'flex',
                         alignItems: 'center',
                         height: '100%',
-                        marginLeft: '30px'
+                        marginLeft: '30px',
+                        '@media (max-width:780px)': {
+                            justifyContent: 'center',
+                            textAlign: 'center',
+                        },
                     }}>
                         <Box >
-                            <Typography sx={{ fontSize: '40px', fontWeight: 'bold' }}>Top House Cleaning Services</Typography>
-                            <Typography sx={{ fontSize: '40px', fontWeight: 'bold' }}>in Delhi NCR</Typography>
+                            <Typography sx={{ fontSize, fontWeight: 'bold' }}>Top House Cleaning Services</Typography>
+                            <Typography sx={{ fontSize, fontWeight: 'bold' }}>in Delhi NCR</Typography>
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item sm={12} lg={6}>
-                    <Box sx={{ display, height: '100%', width: '100%', }}>
-                        <Box sx={{
-                            width: '500px',
-                            height: '380px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            background: '#fff',
-                            padding: '20px',
-                            borderRadius:'6px'
-                        }}>
+                <Grid item sm={12} lg={6} sx={{ justifyContent: 'center' }}>
+                    <Box border={border} sx={{ display, height: '100%', width: '100%', }}>
+                        <Box
+                            width={{
+                                xs: '300px',
+                                sm: '430px',
+                                md: '500px'
+                            }}
+                            sx={{
+
+                                height: '380px',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                background: '#fff',
+                                padding: '20px',
+                                borderRadius: '4px',
+
+
+                            }}>
                             <FormControl fullWidth>
                                 <Select
                                     labelId="demo-simple-select-label"
                                     id="demo-simple-select"
                                     value="Pest Control"
                                     sx={{ fontWeight: 'bold' }}
+                                    fontSize={{
+                                        xs: '12px',
+                                        sm: '30px',
+                                        lg: '40px'
+                                    }
+                                    }
                                 >
                                     <MenuItem value="Pest Control">
                                         Pest Control
@@ -95,11 +151,11 @@ const Banner = () => {
                                     color: '#919191'
 
                                 }}>
-                                    <TextField sx={{color: '#919191'}} fullWidth value='Enter Name' id="fullWidth" />
-                                    <TextField sx={{color: '#919191'}} fullWidth value='Phone Number' id="fullWidth" />
+                                    <TextField sx={{ color: '#919191' }} fullWidth value='Enter Name' id="fullWidth" />
+                                    <TextField sx={{ color: '#919191' }} fullWidth value='Phone Number' id="fullWidth" />
                                 </Box>
                                 <Box>
-                                    <TextField sx={{color: '#919191'}}  fullWidth value='Pincode or Address' id="fullWidth" />
+                                    <TextField sx={{ color: '#919191' }} fullWidth value='Pincode or Address' id="fullWidth" />
                                 </Box>
                                 <Box sx={{ display, marginTop: '27px' }}>
                                     <Button variant="contained" sx={{
@@ -110,12 +166,18 @@ const Banner = () => {
                                         Submit
                                     </Button>
                                 </Box>
-                                <Box sx={{fontSize:'18px',
-                                marginTop:'20px', 
-                                textAlign:'center',
-                                color: '#707070'
+                                <Box sx={{
+                                    fontSize: '18px',
+                                    marginTop: '20px',
+                                    textAlign: 'center',
+                                    color: '#707070'
                                 }}>
-                                    <Typography variant='p' contents='p'>Average call back time : 12 min (Last update 5 mins ago)</Typography>
+                                    <Typography fontSize={{
+                                        xs: '13px',
+                                        sm: '16px',
+                                        lg: '18px'
+                                    }
+                                    } variant='p' contents='p'>Average call back time : 12 min (Last update 5 mins ago)</Typography>
                                 </Box>
                             </FormControl>
                         </Box>

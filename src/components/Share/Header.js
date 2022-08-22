@@ -19,7 +19,6 @@ const Header = () => {
     const classes = useStyles()
     const theme = useTheme()
     const isMatch = useMediaQuery(theme.breakpoints.down("lg"));
-    console.log(isMatch);
     return (
         <Box sx={{ backgroundColor: '#FFFFFF' ,marginBottom:'66px'}}>
             <AppBar sx={{ backgroundColor: '#FFFFFF' ,marginBottom:'90px'}}>

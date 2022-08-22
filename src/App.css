@@ -7,3 +7,10 @@
   left: 0;
   background: rgba(0, 0,0, 0.2);
 }
+
+@media screen and (max-width:900px){
+  .banner::before {
+    background: #fff;
+    z-index: -12;
+  }
+}
