@@ -29,3 +29,10 @@ html {
     object-fit: cover;
   }
 }
+.linear{
+  background: linear-gradient(180deg, #3E93AE 0%, #064161 100%);
+  color:#fff;
+  font-weight: bold;
+ 
+
+}

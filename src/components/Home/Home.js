@@ -6,6 +6,7 @@ import CleanDetails from '../Pages/CleanDetails';
 import Equipment from '../Pages/Equipment';
 import FAQ from '../Pages/FAQ';
 import HouseCleaning from '../Pages/HouseCleaning';
+import Service from '../Pages/Service';
 import Work from '../Pages/Work';
 
 const Home = () => {
@@ -28,10 +29,11 @@ const Home = () => {
                     sx={{ padding: '20px' }}
                 >
                     <HouseCleaning />
-                    <Equipment/>
+                    <Equipment />
                 </Box>
             </Container>
-            <FAQ/>
+            <FAQ />
+            <Service />
         </div>
     );
 };

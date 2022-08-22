@@ -81,7 +81,7 @@ const Equipment = () => {
                                 md: '18px'
                             }
                         }
-                        sx={{}}
+                     
                     >
                         <ListItem>
                             1. Best price guarantee: We offer you the best and lowest price offered in the market. Five Star Rated Experts: Providing you with the top
