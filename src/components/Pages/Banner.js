@@ -9,9 +9,9 @@ import mobile from '../../assets/mobile.jpg'
 const useStyles = makeStyles({
     banner: {
         width: '100%',
-        height:'600px',
+        height: '600px',
         '@media (max-width:900px)': {
-            height:'400px',
+            height: '400px',
         },
     },
     bannerContainer: {
@@ -35,10 +35,10 @@ const Banner = () => {
     const classes = useStyles()
     const styles = {
         heroContainer: {
-           
-            height:'600px',
+
+            height: '600px',
             '@media (max-width:900px)': {
-                height:'400px',
+                height: '400px',
             },
             width: '100%',
             position: 'relative',
@@ -59,7 +59,7 @@ const Banner = () => {
     }
 
 
-    const border={
+    const border = {
         '@media (max-width:900px)': {
             border: '1px solid #E7E7E7',
             borderRadius: "4px"
@@ -71,12 +71,12 @@ const Banner = () => {
         <Box
             className='banner'
             style={styles.heroContainer}
-          marginTop={
-            {
-                xs:'-8px',
-                sm:'0px'
+            marginTop={
+                {
+                    xs: '-8px',
+                    sm: '0px'
+                }
             }
-          }
         >
             <Box>
                 <img className={classes.banner} src={isMatch ? mobile : banner} alt="" />

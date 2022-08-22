@@ -1,13 +1,12 @@
 import React from 'react';
 import Banner from '../Pages/Banner';
+import CleanDetails from '../Pages/CleanDetails';
 
 const Home = () => {
     return (
         <div>
             <Banner/>
-            <div>
-                hdjkshf
-            </div>
+           <CleanDetails/>
         </div>
     );
 };
