@@ -9,6 +9,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { makeStyles } from '@material-ui/styles';
+import useData from '../hooks/useData';
 
 const useStyles=makeStyles({
     carouselImg:{
@@ -20,7 +21,7 @@ const useStyles=makeStyles({
 
 
 const Work = () => {
-    const [workData, setWorkData] = useState([])
+    const [workData] = useData()
     const classes=useStyles()
     const settings = {
         infinite: true,
@@ -63,11 +64,7 @@ const Work = () => {
         ]
     };
 
-    useEffect(()=>{
-        fetch('workData.json')
-        .then(res=>res.json())
-        .then(data=>setWorkData(data[0]))
-    },[])
+  
 
 
     return (

@@ -4,6 +4,7 @@ import React from 'react';
 import Banner from '../Pages/Banner';
 import CleanDetails from '../Pages/CleanDetails';
 import Equipment from '../Pages/Equipment';
+import FAQ from '../Pages/FAQ';
 import HouseCleaning from '../Pages/HouseCleaning';
 import Work from '../Pages/Work';
 
@@ -30,6 +31,7 @@ const Home = () => {
                     <Equipment/>
                 </Box>
             </Container>
+            <FAQ/>
         </div>
     );
 };
