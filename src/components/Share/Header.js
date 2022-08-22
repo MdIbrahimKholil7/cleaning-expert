@@ -1,5 +1,6 @@
-import { Image } from '@mui/icons-material';
-import { AppBar, Toolbar, Typography, Container, Select, MenuItem, FormHelperText, FormControl, InputLabel, } from '@mui/material';
+
+import { AppBar, Toolbar, Typography, Container, Select, MenuItem, FormHelperText, FormControl, InputLabel, Badge, } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { makeStyles } from '@mui/styles';
 // import { makeStyles } from "@material-ui/core/styles";
 import { Box } from '@mui/system';
@@ -20,7 +21,7 @@ const Header = () => {
         <Box>
             <AppBar sx={{ backgroundColor: '#FFFFFF' }}>
                 <Container maxWidth='xl' height={77} sx={{
-                    margin: 0,
+                    margin:'auto',
                     padding: 0
                 }}>
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -36,7 +37,7 @@ const Header = () => {
                         <Box>
                             <FormControl sx={{ m: 1, color: '#001F5A', display: 'flex' }}>
 
-                                <Box  sx={{ m: 1, color: '#001F5A', display: 'flex' }}>
+                                <Box sx={{ m: 1, color: '#001F5A', display: 'flex' }}>
                                     <Box sx={{ borderRight: '1px solid #B2B2B2', paddingRight: '10px' }} >
                                         <Select
 
@@ -57,7 +58,7 @@ const Header = () => {
                                             <MenuItem value={30}>Thirty</MenuItem>
                                         </Select>
                                     </Box>
-                                    <Box sx={{ borderRight: '1px solid #B2B2B2', paddingRight: '10px' ,paddingLeft: '10px'}} >
+                                    <Box sx={{ borderRight: '1px solid #B2B2B2', paddingRight: '10px', paddingLeft: '10px' }} >
                                         <Select
 
                                             labelId="Input label"
@@ -77,12 +78,19 @@ const Header = () => {
                                             <MenuItem value={30}>Thirty</MenuItem>
                                         </Select>
                                     </Box>
-                                    <Box sx={{  paddingRight: '10px',paddingLeft: '10px',display:'flex',justifyContent:'center',alignItems:'center',fontWeight:'bold' }} >
-                                       <Typography variant='p' components='h3'>Covid Disinfection</Typography>
+                                    <Box sx={{ paddingRight: '10px', paddingLeft: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }} >
+                                        <Typography variant='p' components='h3'>Covid Disinfection</Typography>
                                     </Box>
 
                                 </Box>
                             </FormControl>
+                        </Box>
+                        <Box  sx={{ display:'flex' ,gap:10 }}>
+                            <Badge badgeContent={2}  sx={{ color: '#001F5A', }}>
+                                <ShoppingCartIcon
+                                />
+                            </Badge>
+                            <Typography sx={{ color: ' #FF7A00',fontSize:'22px',fontWeight:700 }} variant='p' components='p'>FREE QUOTES</Typography>
                         </Box>
                     </Toolbar>
                 </Container>
