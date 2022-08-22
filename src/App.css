@@ -1,4 +1,4 @@
-html{
+html {
   overflow-x: hidden !important;
 }
 
@@ -9,12 +9,23 @@ html{
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0,0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) {
   .banner::before {
     background: #fff;
     z-index: -12;
+  }
+}
+
+.slick-slide {
+  /* margin: 0 30px; */
+}
+
+@media screen and (max-width:440px) {
+  .img {
+    width: 100% !important;
+    object-fit: cover;
   }
 }
