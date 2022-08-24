@@ -7,6 +7,7 @@ import Equipment from '../Pages/Equipment';
 import FAQ from '../Pages/FAQ';
 import HouseCleaning from '../Pages/HouseCleaning';
 import Service from '../Pages/Service';
+import TimeLine from '../Pages/TimeLine';
 import Work from '../Pages/Work';
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
             </Container>
             <FAQ />
             <Service />
+            <TimeLine/>
         </div>
     );
 };

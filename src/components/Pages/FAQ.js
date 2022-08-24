@@ -10,7 +10,6 @@ import useData from '../hooks/useData';
 
 const FAQ = () => {
     const [workData] = useData()
-    console.log(workData)
     const [expanded, setExpanded] = useState(false);
 
     const handleChange =
