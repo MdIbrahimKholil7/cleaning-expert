@@ -6,6 +6,7 @@ import CleanDetails from '../Pages/CleanDetails';
 import Equipment from '../Pages/Equipment';
 import FAQ from '../Pages/FAQ';
 import HouseCleaning from '../Pages/HouseCleaning';
+import Review from '../Pages/Review';
 import Service from '../Pages/Service';
 import TimeLine from '../Pages/TimeLine';
 import Work from '../Pages/Work';
@@ -36,6 +37,7 @@ const Home = () => {
             <FAQ />
             <Service />
             <TimeLine/>
+            <Review/>
         </div>
     );
 };

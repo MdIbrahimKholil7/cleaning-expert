@@ -122,7 +122,7 @@ const TimeLine = () => {
                         }}
                     >
                         <Timeline
-                        // className={classes.timeLine}
+                        
                         align='left'
                         >
                             <TimelineItem>
@@ -212,9 +212,7 @@ const TimeLine = () => {
                                     <Box className={classes.imgContainer}>
                                         <img className={classes.img} src={icon3} alt="" />
                                     </Box>
-                                    {/*  <TimelineConnector
-                                      className={classes.connector}
-                                  /> */}
+                                  
                                 </TimelineSeparator>
                                 <TimelineContent>
                                     <Typography
