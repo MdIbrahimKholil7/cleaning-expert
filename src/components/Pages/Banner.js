@@ -1,9 +1,10 @@
 
-import { Box, Button, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography, useMediaQuery, useTheme, } from '@mui/material';
+import { Box, Grid, Typography, useMediaQuery, useTheme, } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
 import banner from '../../assets/banner.png'
 import mobile from '../../assets/mobile.jpg'
+import SelectForm from './SelectForm';
 
 
 const useStyles = makeStyles({
@@ -47,11 +48,7 @@ const Banner = () => {
 
     };
 
-    const display = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
+  
     const fontSize = {
         xs: '20px',
         sm: '30px',
@@ -59,12 +56,6 @@ const Banner = () => {
     }
 
 
-    const border = {
-        '@media (max-width:900px)': {
-            border: '1px solid #E7E7E7',
-            borderRadius: "4px"
-        },
-    }
 
 
     return (
@@ -105,7 +96,7 @@ const Banner = () => {
                     </Box>
                 </Grid>
                 <Grid item sm={12} lg={6} sx={{ justifyContent: 'center' }}>
-                    <Box border={border} sx={{ display, height: '100%', width: '100%', }}>
+                  {/*   <Box border={border} sx={{ display, height: '100%', width: '100%', }}>
                         <Box
                             width={{
                                 xs: '300px',
@@ -181,7 +172,10 @@ const Banner = () => {
                                 </Box>
                             </FormControl>
                         </Box>
-                    </Box>
+                    </Box> */}
+                    <SelectForm
+                    isBorder={true}
+                    />
                 </Grid>
             </Grid>
         </Box>
