@@ -21,7 +21,9 @@ const Header = () => {
     const isMatch = useMediaQuery(theme.breakpoints.down("lg"));
     return (
         <Box sx={{ backgroundColor: '#FFFFFF' ,marginBottom:'66px'}}>
-            <AppBar sx={{ backgroundColor: '#FFFFFF' ,marginBottom:'90px'}}>
+            <AppBar 
+            className='header'
+            sx={{ backgroundColor: '#FFFFFF' ,marginBottom:'90px',}}>
                 <Container maxWidth='xl' height={77} sx={{
                     margin: 'auto',
                     padding: 0

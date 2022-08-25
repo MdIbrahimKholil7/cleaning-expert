@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     logo: {
         width: 43,
         '@media (max-width:780px)': {
-            width: 24
+            width: 20
         },
         height: 'auto'
     },
@@ -104,7 +104,7 @@ const MobileHeader = () => {
                                 variant='p' component='h3'>Expert</Typography>
                         </Box>
                     </Box>
-                    <Box sx={{ display: 'flex', gap: 2 }}>
+                    <Box sx={{ display: 'flex', gap: 1 }}>
                         <Box sx={{ display: 'flex', color: '#000', alignItems: 'center' }}>
                             <img className={classes.logo} src={phone1} alt='' />
                         </Box>

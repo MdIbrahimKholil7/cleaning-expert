@@ -1,7 +1,11 @@
-html {
-  overflow-x: hidden !important;
+html, body{
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
-
+.header{
+  padding-right: 0px !important;
+}
 .banner::before {
   content: '';
   width: 100%;

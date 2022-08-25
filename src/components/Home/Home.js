@@ -13,6 +13,7 @@ import SelectForm from '../Pages/SelectForm';
 import Service from '../Pages/Service';
 import TimeLine from '../Pages/TimeLine';
 import Work from '../Pages/Work';
+import Footer from '../Share/Footer';
 
 const Home = () => {
     const theme = useTheme()
@@ -55,6 +56,7 @@ const Home = () => {
             >
                 <SelectForm />
             </Box>
+            <Footer/>
         </div>
     );
 };
