@@ -4,7 +4,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { makeStyles } from '@mui/styles';
 // import { makeStyles } from "@material-ui/core/styles";
 import { Box } from '@mui/system';
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../assets/logo.png'
 import MobileHeader from './MobileHeader';
 
@@ -15,7 +15,8 @@ const useStyles = makeStyles({
     },
 });
 const Header = () => {
-
+        const [home, setHome] = useState('Home Cleaning')
+        const [pest, setPest] = useState('Pest Control')
     const classes = useStyles()
     const theme = useTheme()
     const isMatch = useMediaQuery(theme.breakpoints.down("lg"));
@@ -49,12 +50,12 @@ const Header = () => {
 
                                                     labelId="Input label"
                                                     id="Select"
-                                                    value="Pest Control"
+                                                    value={pest}
                                                     inputProps={{ 'aria-label': 'Without label' }}
-                                                    defaultValue='Please'
                                                     disableUnderline={true}
                                                     variant='standard'
                                                     sx={{ color: '#001F5A', fontWeight: 'bold' }}
+                                                    onChange={(e)=>setPest(e.target.value)}
                                                 >
                                                     <MenuItem value="Pest Control">
                                                         Pest Control
@@ -69,12 +70,13 @@ const Header = () => {
 
                                                     labelId="Input label"
                                                     id="Select"
-                                                    value="Home Cleaning"
+                                                    value={home}
                                                     inputProps={{ 'aria-label': 'Without label' }}
                                                     defaultValue='Please'
                                                     disableUnderline={true}
                                                     variant='standard'
                                                     sx={{ color: '#001F5A', fontWeight: 'bold' }}
+                                                    onChange={(e)=>setHome(e.target.value)}
                                                 >
                                                     <MenuItem value="Home Cleaning">
                                                         Home Cleaning
